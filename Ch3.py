@@ -1,3 +1,16 @@
+class colour:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
+
 width = height = length = ""
 while width.isdigit() != True:
     width = input("What is the width of the cuboid? ")
@@ -6,4 +19,4 @@ while length.isdigit() != True:
 while height.isdigit() != True:
     height = input("What is the height of the cuboid? ")
 volume = int(width)*int(length)*int(height)
-print("Volume =",str(volume) )
+print(colour.BOLD + "Volume =",str(volume) + colour.END )
